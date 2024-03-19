@@ -173,6 +173,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        btnEsittir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                txt_Islem.setText(txt_Sonuc.getText());
+                //+ history + işlem yaptır
+
+
+            }
+        });
+
         butnNokta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
