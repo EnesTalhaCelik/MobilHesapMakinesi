@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text=""
+                android:text="_"
                 android:textSize="10pt"
                 android:gravity="bottom|left"
                 android:textColor="@color/white"
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Siil"
+                android:text="Sil"
                 android:textSize="10pt"
                 android:gravity="bottom|right"
                 android:textColor="@color/white"
@@ -99,13 +99,7 @@
                 android:textSize="25dp"
                 android:text="C" />
 
-            <Button
-                android:id="@+id/btnYuzde"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textSize="25dp"
-                android:text="%" />
+
 
             <Button
                 android:id="@+id/btnBol"

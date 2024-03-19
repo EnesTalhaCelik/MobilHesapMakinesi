@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button butnCikar =  findViewById(R.id.btnCikar);
         Button butnCarp =  findViewById(R.id.btnCarp);
         Button butnBol =  findViewById(R.id.btnBol);
-        Button butnYuzde =  findViewById(R.id.btnYuzde);
+
         Button ButnSil = findViewById(R.id.ButtonSil);
         Button ButnGecmis = findViewById(R.id.ButtonGecmis);
         Button ButnArtEks = findViewById(R.id.btnArtEks);
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
+                if(sonYapilanIslem == 0){
                     txt_Islem.setText(txt_Islem.getText().toString()+"x");
 
                     /*sayiUzunluk =0;
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
+                if(sonYapilanIslem == 0){
                     txt_Islem.setText(txt_Islem.getText().toString()+"+");
 
                     /*sayiUzunluk =0;
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txt_Sonuc.setText("");
                 //Double sonuc = Calculator.evaluateExpression(displayStr);
                // txt_Sonuc.setText(sonuc.toString());
-
+                sonYapilanIslem = 0;
 
             }
         });
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
+                if(sonYapilanIslem == 0){
                     txt_Islem.setText(txt_Islem.getText().toString()+".");
 
                     /*sayiUzunluk =0;
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
+                if(sonYapilanIslem == 0){
                     txt_Islem.setText(txt_Islem.getText().toString()+"-");
 
                     /*sayiUzunluk =0;
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
+                if(sonYapilanIslem == 0){
                     txt_Islem.setText(txt_Islem.getText().toString()+"/");
 
                     /*sayiUzunluk =0;
@@ -282,26 +282,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         });
 
-        butnYuzde.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 0){
-                    txt_Islem.setText(txt_Islem.getText().toString()+"%");
-
-                    /*sayiUzunluk =0;
-                    toplamUzunluk += 1;*/
-                }else if(!txt_Islem.getText().toString().equals("0")&&sonYapilanIslem == 1){
-                    //txt_Islem.setText(txt_Islem.getText().toString()+b.getText().toString());
-                    //burada cursor pozisyonunu kullanarak işlem değişikliği yapacağız
-                    /*sayiUzunluk =0;
-                    toplamUzunluk += 1;*/
-                }
-
-                sonYapilanIslem = 1;
-
-            }
-        });
         butnTemizle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
