@@ -22,10 +22,11 @@
             android:layout_weight="1">
             <TextView
                 android:id="@+id/textViewIslem"
+                android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="9+10"
+                android:text="0"
                 android:textSize="25pt"
                 android:textColor="#f7f7f7"
                 android:gravity="bottom|right"/>
@@ -42,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="21"
+                android:text=""
                 android:textSize="15pt"
                 android:textColor="#c9c9c9"
                 android:gravity="bottom|right"/>
@@ -53,8 +54,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/textViewGecmis"
+            <Button
+                android:id="@+id/ButtonGecmis"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -62,10 +63,11 @@
                 android:textSize="10pt"
                 android:gravity="bottom|left"
                 android:textColor="@color/white"
-                android:paddingStart="10dp"/>
+                android:paddingStart="10dp"
+                android:background="@android:color/transparent"/>
 
-            <TextView
-                android:id="@+id/textViewSil"
+            <Button
+                android:id="@+id/ButtonSil"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -73,7 +75,8 @@
                 android:textSize="10pt"
                 android:gravity="bottom|right"
                 android:textColor="@color/white"
-                android:paddingEnd="10dp"/>
+                android:paddingEnd="10dp"
+                android:background="@android:color/transparent"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -95,14 +98,6 @@
                 android:layout_weight="1"
                 android:textSize="25dp"
                 android:text="C" />
-
-            <Button
-                android:id="@+id/btnPrntz"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="()"
-                android:textSize="25dp"/>
 
             <Button
                 android:id="@+id/btnYuzde"
