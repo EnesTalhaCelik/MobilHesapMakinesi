@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import org.mariuszgromada.math.mxparser.Expression;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -85,16 +86,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     sonYapilanIslem = 0;
 
                 }
+                String displayStr = txt_Islem.getText().toString().replace("x", "*");
+                Expression expression = new Expression(displayStr);
+                Double result = expression.calculate();
+                txt_Sonuc.setText(result.toString());
 
             });
         }
-        btnEsittir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //eşittir fonksiyonu
 
-            }
-        });
 
         ButnArtEks.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,9 +175,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEsittir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                txt_Islem.setText(txt_Sonuc.getText());
-                //+ history + işlem yaptır
+                String displayStr = txt_Islem.getText().toString().replace("x", "*");
+                Expression expression = new Expression(displayStr);
+                Double result = expression.calculate();
+                txt_Islem.setText(result.toString());
+                txt_Sonuc.setText("");
+                //Double sonuc = Calculator.evaluateExpression(displayStr);
+               // txt_Sonuc.setText(sonuc.toString());
 
 
             }
